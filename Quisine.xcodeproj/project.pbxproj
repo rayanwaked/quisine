@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90DA1112C67F88C00C26947 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90DA1102C67F88C00C26947 /* Launch Screen.storyboard */; };
+		B944D7FF2C6670BD009BE4D6 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D7FE2C6670BD009BE4D6 /* MealView.swift */; };
+		B944D8012C6670C7009BE4D6 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8002C6670C7009BE4D6 /* MealModel.swift */; };
+		B944D8032C6670CE009BE4D6 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8022C6670CE009BE4D6 /* MealViewModel.swift */; };
+		B944D8052C667CBA009BE4D6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8042C667CBA009BE4D6 /* HomeModel.swift */; };
+		B944D8072C667CCC009BE4D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8062C667CCC009BE4D6 /* HomeViewModel.swift */; };
+		B944D8092C667CD5009BE4D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8082C667CD5009BE4D6 /* HomeView.swift */; };
+		B944D80B2C6691C5009BE4D6 /* FilterComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D80A2C6691C5009BE4D6 /* FilterComp.swift */; };
+		B944D8102C669E9D009BE4D6 /* FeatureComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D80F2C669E9D009BE4D6 /* FeatureComp.swift */; };
+		B944D8122C669EEF009BE4D6 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8112C669EEF009BE4D6 /* Sizes.swift */; };
 		B9B82A022C65B78A00CF7BE5 /* QuisineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B82A012C65B78A00CF7BE5 /* QuisineApp.swift */; };
 		B9B82A042C65B78A00CF7BE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B82A032C65B78A00CF7BE5 /* ContentView.swift */; };
 		B9B82A062C65B78E00CF7BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B82A052C65B78E00CF7BE5 /* Assets.xcassets */; };
@@ -14,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B90DA1102C67F88C00C26947 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B944D7FE2C6670BD009BE4D6 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		B944D8002C6670C7009BE4D6 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		B944D8022C6670CE009BE4D6 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		B944D8042C667CBA009BE4D6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		B944D8062C667CCC009BE4D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B944D8082C667CD5009BE4D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B944D80A2C6691C5009BE4D6 /* FilterComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterComp.swift; sourceTree = "<group>"; };
+		B944D80F2C669E9D009BE4D6 /* FeatureComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureComp.swift; sourceTree = "<group>"; };
+		B944D8112C669EEF009BE4D6 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		B9B829FE2C65B78A00CF7BE5 /* Quisine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quisine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B82A012C65B78A00CF7BE5 /* QuisineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuisineApp.swift; sourceTree = "<group>"; };
 		B9B82A032C65B78A00CF7BE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +52,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B90DA1122C67F89A00C26947 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B90DA1102C67F88C00C26947 /* Launch Screen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		B9360DC72C65B9D80002551F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B9B82A032C65B78A00CF7BE5 /* ContentView.swift */,
+				B9360DC92C65BA460002551F /* Home */,
+				B98D77352C65BBD200BCFC01 /* Meal */,
+				B90DA1122C67F89A00C26947 /* Launch */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B9360DC82C65B9DD0002551F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B944D8112C669EEF009BE4D6 /* Sizes.swift */,
+				B9B82A052C65B78E00CF7BE5 /* Assets.xcassets */,
+				B9B82A072C65B78E00CF7BE5 /* Preview Content */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B9360DC92C65BA460002551F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B944D8042C667CBA009BE4D6 /* HomeModel.swift */,
+				B944D8062C667CCC009BE4D6 /* HomeViewModel.swift */,
+				B944D8082C667CD5009BE4D6 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B98D77352C65BBD200BCFC01 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				B944D8002C6670C7009BE4D6 /* MealModel.swift */,
+				B944D8022C6670CE009BE4D6 /* MealViewModel.swift */,
+				B944D7FE2C6670BD009BE4D6 /* MealView.swift */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		B98D77362C65BBE700BCFC01 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B944D80A2C6691C5009BE4D6 /* FilterComp.swift */,
+				B944D80F2C669E9D009BE4D6 /* FeatureComp.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B9B829F52C65B78A00CF7BE5 = {
 			isa = PBXGroup;
 			children = (
@@ -52,9 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				B9B82A012C65B78A00CF7BE5 /* QuisineApp.swift */,
-				B9B82A032C65B78A00CF7BE5 /* ContentView.swift */,
-				B9B82A052C65B78E00CF7BE5 /* Assets.xcassets */,
-				B9B82A072C65B78E00CF7BE5 /* Preview Content */,
+				B9360DC72C65B9D80002551F /* Modules */,
+				B98D77362C65BBE700BCFC01 /* Components */,
+				B9360DC82C65B9DD0002551F /* Assets */,
 			);
 			path = Quisine;
 			sourceTree = "<group>";
@@ -125,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90DA1112C67F88C00C26947 /* Launch Screen.storyboard in Resources */,
 				B9B82A092C65B78E00CF7BE5 /* Preview Assets.xcassets in Resources */,
 				B9B82A062C65B78E00CF7BE5 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +217,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B82A042C65B78A00CF7BE5 /* ContentView.swift in Sources */,
+				B944D8102C669E9D009BE4D6 /* FeatureComp.swift in Sources */,
+				B944D8032C6670CE009BE4D6 /* MealViewModel.swift in Sources */,
+				B944D8072C667CCC009BE4D6 /* HomeViewModel.swift in Sources */,
+				B944D8052C667CBA009BE4D6 /* HomeModel.swift in Sources */,
 				B9B82A022C65B78A00CF7BE5 /* QuisineApp.swift in Sources */,
+				B944D8092C667CD5009BE4D6 /* HomeView.swift in Sources */,
+				B944D8012C6670C7009BE4D6 /* MealModel.swift in Sources */,
+				B944D80B2C6691C5009BE4D6 /* FilterComp.swift in Sources */,
+				B944D8122C669EEF009BE4D6 /* Sizes.swift in Sources */,
+				B944D7FF2C6670BD009BE4D6 /* MealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,15 +359,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Quisine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Quisine/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Quisine;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +378,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = waked.Quisine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,15 +395,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Quisine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Quisine/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Quisine;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +414,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = waked.Quisine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
