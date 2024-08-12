@@ -5,14 +5,12 @@
 //  Created by Rayan Waked on 8/9/24.
 //
 
-// TODO: Fix list loading color and background color
-
 // MARK: - IMPORT
 import SwiftUI
 
 // MARK: - VIEW
 struct HomeView: View {
-    @StateObject private var viewModel = MealListViewModel()
+    @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
         NavigationView {
@@ -41,18 +39,22 @@ struct HomeView: View {
 private extension HomeView {
     // MARK: - BACKGROUND
     var background: some View {
-        Image("GrainyGradient")
-            .resizable()
-            .scaledToFill()
-            .frame(minWidth: 0)
-            .edgesIgnoringSafeArea(.all)
-            .opacity(0.8)
+        VStack {
+            Image("GrainyGradient")
+                .resizable()
+                .scaledToFill()
+                .frame(minWidth: 0)
+                .frame(maxHeight: 300)
+                .edgesIgnoringSafeArea(.all)
+                .opacity(0.8)
+            Spacer()
+        }
     }
     
     // MARK: - HEADER
     var logo: some View {
         HStack {
-            Text("Quisine")
+            Text("Quisine.")
                 .font(.system(size: 28, design: .serif))
                 .font(.title)
             Spacer()
@@ -74,9 +76,11 @@ private extension HomeView {
     var filter: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                FilterComp(label: "Japanese")
-                FilterComp(label: "Swiss")
-                FilterComp(label: "Turkish")
+                ForEach(viewModel.filters) { filter in
+                    FilterComp(label: filter.name, isActive: filter.isActive) {
+                        viewModel.toggleFilter(filter)
+                    }
+                }
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 10)
@@ -101,6 +105,7 @@ private extension HomeView {
                             )
                         }
                         .frame(width: 350, height: 200)
+                        .padding(.trailing, -10)
                         .tint(Color.black)
                     }
                 }
@@ -122,33 +127,12 @@ private extension HomeView {
                 .font(.title2.bold())
                 .foregroundStyle(Color.primary)
             
-            ForEach(viewModel.meals.dropFirst(5), id: \.idMeal) { meal in
-                mealRow(for: meal)
-            }
+            ForEach(viewModel.filteredMeals, id: \.idMeal) { meal in
+                     RowComp(for: meal)
+                 }
         }
         .standardPadding()
         .background(Color.background)
-    }
-}
-
-// MARK: - MEAL ROW
-private func mealRow(for meal: MealList) -> some View {
-    NavigationLink(destination: MealView(mealID: meal.idMeal)) {
-        HStack {
-            AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 50, height: 50)
-            .cornerRadius(8)
-            
-            Text(meal.strMeal)
-                .foregroundStyle(Color.primary)
-                .padding(.leading)
-            
-            Spacer()
-        }
     }
 }
 

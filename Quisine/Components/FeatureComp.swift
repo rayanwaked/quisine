@@ -39,7 +39,7 @@ private extension FeatureComp {
             .cornerRadius(20)
             
             VStack(alignment: .leading, spacing: 0) {
-                Text(name)
+                Text(name.capitalized)
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)

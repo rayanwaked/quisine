@@ -5,7 +5,7 @@
 //  Created by Rayan Waked on 8/9/24.
 //
 
-// MARK: IMPORT
+// MARK: - IMPORT
 import Foundation
 
 // MARK: - MEALLIST STUCT
@@ -28,7 +28,7 @@ struct MealListResponse: Codable {
 class MealListDataManager {
     var mealList: [MealList] = []
     
-    // MARK: FETCH REMOTE DATA
+    // MARK: - FETCH REMOTE DATA
     /// Func to fetch data from an API endpoint
     func fetchRemoteData(completion: @escaping (Result<[MealList], Error>) -> Void) {
         let url = URL(string: "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert")!

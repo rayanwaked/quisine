@@ -1,3 +1,10 @@
+//
+//  MealView.swift
+//  Quisine
+//
+//  Created by Rayan Waked on 8/9/24.
+//
+
 // MARK: - IMPORT
 import SwiftUI
 
@@ -33,7 +40,7 @@ struct MealView: View {
     }
 }
 
-// MARK: - EXTENSIONS
+// MARK: - EXTENSION
 private extension MealView {
     // MARK: - IMAGE
     @ViewBuilder
@@ -62,18 +69,15 @@ private extension MealView {
     @ViewBuilder
     func categorycuisine(for meal: Meal) -> some View {
         HStack {
-            if let category = meal.strCategory {
-                Text("\(category) Based Meal")
+            if let area = meal.strArea {
+                Text("\(area)")
                     .font(.subheadline)
                     .foregroundStyle(.primary.opacity(0.6))
+                    .padding(.trailing, -4)
             }
             
-            Text("·")
-                .font(.subheadline)
-                .foregroundStyle(.primary.opacity(0.6))
-            
-            if let area = meal.strArea {
-                Text("\(area) Cuisine")
+            if let category = meal.strCategory {
+                Text("\(category)")
                     .font(.subheadline)
                     .foregroundStyle(.primary.opacity(0.6))
             }
@@ -89,13 +93,17 @@ private extension MealView {
             .font(.title2.bold())
             .padding(.bottom, 2)
         
-        ForEach(meal.ingredients.sorted(by: { $0.key < $1.key }), id: \.key) { ingredient, measure in
+        ForEach(Array(meal.ingredients.sorted(by: { $0.key < $1.key }).enumerated()), id: \.element.key) { index, ingredient in
             HStack {
+                Toggle(isOn: $viewModel.ingredientCheckedStates[index]) {}
+                .toggleStyle(CheckboxComp())
+                
                 Text("•")
-                if !measure.isEmpty {
-                    Text("\(measure) \(ingredient)")
+                
+                if !ingredient.value.isEmpty {
+                    Text("\(ingredient.value) \(ingredient.key)")
                 } else {
-                    Text(ingredient)
+                    Text(ingredient.key)
                 }
             }
         }
@@ -123,9 +131,12 @@ private extension MealView {
     func youtubeLink(for meal: Meal) -> some View {
         Divider()
         
-        if let youtubeLink = meal.strYoutube {
-            Link("Watch on YouTube", destination: URL(string: youtubeLink)!)
-                .foregroundColor(.blue)
+        if let youtubeLink = meal.strYoutube, let url = URL(string: youtubeLink) {
+            Link("Watch on YouTube", destination: url)
+                .padding()
+                .foregroundStyle(Color.background)
+                .background(Color.primary)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
         }
     }
 }

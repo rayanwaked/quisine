@@ -5,14 +5,15 @@
 //  Created by Rayan Waked on 8/9/24.
 //
 
+// MARK: - IMPORT
 import UIKit
 import SwiftUI
 
-// MARK: - UIKit Bounds
+// MARK: - UIKIT BOUNDS
 let width = UIScreen.main.bounds.width
 let height = UIScreen.main.bounds.height
 
-// MARK: - Standard Padding
+// MARK: - STANDARD PADDING
 extension View {
     func standardPadding() -> some View {
         self

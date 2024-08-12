@@ -13,10 +13,12 @@ struct Meal: Codable {
     let strYoutube: String?
     var ingredients: [String: String] = [:]
     
+    // MARK: - CODING KEYS
     enum CodingKeys: String, CodingKey {
         case idMeal, strMeal, strMealThumb, strInstructions, strCategory, strArea, strTags, strYoutube
     }
     
+    // MARK: - INITIALIZE
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
         
@@ -72,7 +74,7 @@ struct MealResponse: Codable {
 class MealDataManager {
     var meal: [Meal] = []
     
-    // MARK: FETCH REMOTE DATA
+    // MARK: - FETCH REMOTE DATA
     /// Func to fetch data from an API endpoint
     func fetchRemoteData(mealID: String, completion: @escaping (Result<[Meal], Error>) -> Void) {
         let url = URL(string: "https://themealdb.com/api/json/v1/1/lookup.php?i=\(mealID)")!

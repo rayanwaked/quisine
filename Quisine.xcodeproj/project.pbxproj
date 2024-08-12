@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B90DA1112C67F88C00C26947 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90DA1102C67F88C00C26947 /* Launch Screen.storyboard */; };
+		B90DA1152C680A8300C26947 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DA1142C680A8300C26947 /* LaunchView.swift */; };
+		B91E2E8F2C698A1600C249AF /* CheckboxComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E8E2C698A1600C249AF /* CheckboxComp.swift */; };
+		B91E2E912C6992B600C249AF /* RowComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E902C6992B600C249AF /* RowComp.swift */; };
 		B944D7FF2C6670BD009BE4D6 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D7FE2C6670BD009BE4D6 /* MealView.swift */; };
 		B944D8012C6670C7009BE4D6 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8002C6670C7009BE4D6 /* MealModel.swift */; };
 		B944D8032C6670CE009BE4D6 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8022C6670CE009BE4D6 /* MealViewModel.swift */; };
@@ -25,6 +28,11 @@
 
 /* Begin PBXFileReference section */
 		B90DA1102C67F88C00C26947 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B90DA1132C6806E200C26947 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B90DA1142C680A8300C26947 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		B90DA1182C6815EC00C26947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B91E2E8E2C698A1600C249AF /* CheckboxComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxComp.swift; sourceTree = "<group>"; };
+		B91E2E902C6992B600C249AF /* RowComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowComp.swift; sourceTree = "<group>"; };
 		B944D7FE2C6670BD009BE4D6 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		B944D8002C6670C7009BE4D6 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		B944D8022C6670CE009BE4D6 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
@@ -56,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				B90DA1102C67F88C00C26947 /* Launch Screen.storyboard */,
+				B90DA1142C680A8300C26947 /* LaunchView.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -104,8 +113,10 @@
 		B98D77362C65BBE700BCFC01 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B91E2E8E2C698A1600C249AF /* CheckboxComp.swift */,
 				B944D80A2C6691C5009BE4D6 /* FilterComp.swift */,
 				B944D80F2C669E9D009BE4D6 /* FeatureComp.swift */,
+				B91E2E902C6992B600C249AF /* RowComp.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -129,10 +140,12 @@
 		B9B82A002C65B78A00CF7BE5 /* Quisine */ = {
 			isa = PBXGroup;
 			children = (
+				B90DA1182C6815EC00C26947 /* Info.plist */,
 				B9B82A012C65B78A00CF7BE5 /* QuisineApp.swift */,
 				B9360DC72C65B9D80002551F /* Modules */,
 				B98D77362C65BBE700BCFC01 /* Components */,
 				B9360DC82C65B9DD0002551F /* Assets */,
+				B90DA1132C6806E200C26947 /* README.md */,
 			);
 			path = Quisine;
 			sourceTree = "<group>";
@@ -225,6 +238,9 @@
 				B944D8092C667CD5009BE4D6 /* HomeView.swift in Sources */,
 				B944D8012C6670C7009BE4D6 /* MealModel.swift in Sources */,
 				B944D80B2C6691C5009BE4D6 /* FilterComp.swift in Sources */,
+				B91E2E912C6992B600C249AF /* RowComp.swift in Sources */,
+				B90DA1152C680A8300C26947 /* LaunchView.swift in Sources */,
+				B91E2E8F2C698A1600C249AF /* CheckboxComp.swift in Sources */,
 				B944D8122C669EEF009BE4D6 /* Sizes.swift in Sources */,
 				B944D7FF2C6670BD009BE4D6 /* MealView.swift in Sources */,
 			);
@@ -357,17 +373,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quisine/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quisine/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Quisine;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -393,17 +412,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quisine/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6R2E9P9EPV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Quisine/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Quisine;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
