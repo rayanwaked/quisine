@@ -1,3 +1,5 @@
+<img width="2041" alt="Screenshot 2024-08-12 at 11 44 41 AM" src="https://github.com/user-attachments/assets/187adf2b-eb61-4a3d-b8b8-d9b2f8925ac3">
+
 # Quisine
 
 Quisine is a SwiftUI-based iOS application that allows users to explore and view dessert recipes.
