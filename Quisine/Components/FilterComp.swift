@@ -5,10 +5,10 @@
 //  Created by Rayan Waked on 8/9/24.
 //
 
-// MARK: IMPORT
+// MARK: - IMPORT
 import SwiftUI
 
-// MARK: VIEW
+// MARK: - VIEW
 struct FilterComp: View {
     let label: String
     let isActive: Bool
@@ -32,7 +32,7 @@ struct FilterComp: View {
         .onTapGesture(perform: action)
     }
 }
-// MARK: PREVIEW
+// MARK: - PREVIEW
 #Preview {
     FilterComp(label: "Japanese", isActive: true) {
         // Function

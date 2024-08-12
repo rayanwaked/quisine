@@ -24,10 +24,12 @@ struct ContentView: View {
                     .opacity(homeViewOpacity)
             }
             
+            // Show LaunchView on app open
             if isShowingLaunchView {
                 LaunchView()
             }
         }
+        // Handle the opacity change and LaunchView state
         .onAppear {
             DispatchQueue.main.async {
                 self.homeViewOpacity = 0

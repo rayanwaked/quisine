@@ -67,6 +67,7 @@ struct CustomCornerShape: Shape {
     }
 }
 
+// MARK: - PREVIEW
 #Preview {
     FeatureComp(
         name: "Chocolate Lava Cake",

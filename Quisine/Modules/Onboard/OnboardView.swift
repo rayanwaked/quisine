@@ -13,17 +13,6 @@ struct OnboardView: View {
     @StateObject var viewModel = OnboardViewModel()
     
     var body: some View {
-        Group {
-            if viewModel.hasCompletedOnboarding {
-                onboardingContent
-            } else {
-                onboardingContent
-            }
-        }
-    }
-    
-    @ViewBuilder
-    private var onboardingContent: some View {
         ZStack {
             background
             switch viewModel.currentPage {

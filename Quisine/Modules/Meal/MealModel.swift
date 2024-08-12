@@ -1,3 +1,10 @@
+//
+//  MealModel.swift
+//  Quisine
+//
+//  Created by Rayan Waked on 8/9/24.
+//
+
 // MARK: - IMPORT
 import Foundation
 
