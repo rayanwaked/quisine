@@ -40,7 +40,7 @@ private extension FeatureComp {
             
             VStack(alignment: .leading, spacing: 0) {
                 Text(name.capitalized)
-                    .font(.title2)
+                    .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
                     .padding(.horizontal, 16)

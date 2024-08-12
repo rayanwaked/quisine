@@ -11,6 +11,9 @@
 		B90DA1152C680A8300C26947 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90DA1142C680A8300C26947 /* LaunchView.swift */; };
 		B91E2E8F2C698A1600C249AF /* CheckboxComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E8E2C698A1600C249AF /* CheckboxComp.swift */; };
 		B91E2E912C6992B600C249AF /* RowComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E902C6992B600C249AF /* RowComp.swift */; };
+		B91E2E942C6A694F00C249AF /* OnboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E932C6A694F00C249AF /* OnboardModel.swift */; };
+		B91E2E962C6A695500C249AF /* OnboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E952C6A695500C249AF /* OnboardViewModel.swift */; };
+		B91E2E982C6A695E00C249AF /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E2E972C6A695E00C249AF /* OnboardView.swift */; };
 		B944D7FF2C6670BD009BE4D6 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D7FE2C6670BD009BE4D6 /* MealView.swift */; };
 		B944D8012C6670C7009BE4D6 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8002C6670C7009BE4D6 /* MealModel.swift */; };
 		B944D8032C6670CE009BE4D6 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944D8022C6670CE009BE4D6 /* MealViewModel.swift */; };
@@ -33,6 +36,9 @@
 		B90DA1182C6815EC00C26947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B91E2E8E2C698A1600C249AF /* CheckboxComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxComp.swift; sourceTree = "<group>"; };
 		B91E2E902C6992B600C249AF /* RowComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowComp.swift; sourceTree = "<group>"; };
+		B91E2E932C6A694F00C249AF /* OnboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardModel.swift; sourceTree = "<group>"; };
+		B91E2E952C6A695500C249AF /* OnboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewModel.swift; sourceTree = "<group>"; };
+		B91E2E972C6A695E00C249AF /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		B944D7FE2C6670BD009BE4D6 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		B944D8002C6670C7009BE4D6 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 		B944D8022C6670CE009BE4D6 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
@@ -69,10 +75,21 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		B91E2E922C6A693E00C249AF /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				B91E2E932C6A694F00C249AF /* OnboardModel.swift */,
+				B91E2E952C6A695500C249AF /* OnboardViewModel.swift */,
+				B91E2E972C6A695E00C249AF /* OnboardView.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
 		B9360DC72C65B9D80002551F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				B9B82A032C65B78A00CF7BE5 /* ContentView.swift */,
+				B91E2E922C6A693E00C249AF /* Onboard */,
 				B9360DC92C65BA460002551F /* Home */,
 				B98D77352C65BBD200BCFC01 /* Meal */,
 				B90DA1122C67F89A00C26947 /* Launch */,
@@ -230,6 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B82A042C65B78A00CF7BE5 /* ContentView.swift in Sources */,
+				B91E2E942C6A694F00C249AF /* OnboardModel.swift in Sources */,
+				B91E2E982C6A695E00C249AF /* OnboardView.swift in Sources */,
+				B91E2E962C6A695500C249AF /* OnboardViewModel.swift in Sources */,
 				B944D8102C669E9D009BE4D6 /* FeatureComp.swift in Sources */,
 				B944D8032C6670CE009BE4D6 /* MealViewModel.swift in Sources */,
 				B944D8072C667CCC009BE4D6 /* HomeViewModel.swift in Sources */,

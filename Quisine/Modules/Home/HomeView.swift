@@ -43,12 +43,15 @@ private extension HomeView {
             Image("GrainyGradient")
                 .resizable()
                 .scaledToFill()
+                .overlay(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.01), Color.background]),
+                    startPoint: .top, endPoint: .bottom))
                 .frame(minWidth: 0)
-                .frame(maxHeight: 300)
+                .frame(maxHeight: 250)
                 .edgesIgnoringSafeArea(.all)
-                .opacity(0.8)
             Spacer()
         }
+        // This modifier applies to the entire view's background due to the ZStack layering
+        .background(Color.background)
     }
     
     // MARK: - HEADER
@@ -120,7 +123,6 @@ private extension HomeView {
     var list: some View {
         LazyVStack(alignment: .leading, spacing: 16) {
             Divider()
-                .padding(.horizontal)
                 .padding(.vertical, 4)
             
             Text("Explore")

@@ -28,7 +28,6 @@ class HomeViewModel: ObservableObject {
         FilterOption(name: "Pudding"),
         FilterOption(name: "Pancake"),
         FilterOption(name: "Brownie"),
-        FilterOption(name: "Custard"),
         FilterOption(name: "Mousse")
     ]
     private let dataManager = MealListDataManager()
