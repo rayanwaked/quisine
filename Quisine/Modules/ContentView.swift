@@ -12,11 +12,17 @@ import SwiftUI
 struct ContentView: View {
     @State private var isShowingLaunchView = true
     @State private var homeViewOpacity: Double = 0
-    
+    @StateObject private var onboardViewModel = OnboardViewModel()
+
     var body: some View {
         ZStack {
-            HomeView()
-                .opacity(homeViewOpacity)
+            if onboardViewModel.hasCompletedOnboarding {
+                HomeView()
+                    .opacity(homeViewOpacity)
+            } else {
+                OnboardView(viewModel: onboardViewModel)
+                    .opacity(homeViewOpacity)
+            }
             
             if isShowingLaunchView {
                 LaunchView()
@@ -27,11 +33,17 @@ struct ContentView: View {
                 self.homeViewOpacity = 0
             }
             
-            // Schedule the transition
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                withAnimation(.easeIn(duration: 1)) {
+                withAnimation(.easeIn(duration: 1.2)) {
                     self.homeViewOpacity = 1
                     self.isShowingLaunchView = false
+                }
+            }
+        }
+        .onChange(of: onboardViewModel.hasCompletedOnboarding) { newValue in
+            if newValue {
+                withAnimation(.easeIn(duration: 0.5)) {
+                    homeViewOpacity = 1
                 }
             }
         }

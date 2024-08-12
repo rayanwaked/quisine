@@ -6,4 +6,26 @@
 //
 
 // MARK: - IMPORT
-import Foundation
+import SwiftUI
+
+class OnboardViewModel: ObservableObject {
+    @Published var currentPage: Int = 1
+    @Published var hasCompletedOnboarding: Bool {
+        didSet {
+            UserDefaults.standard.set(hasCompletedOnboarding, forKey: "hasCompletedOnboarding")
+        }
+    }
+    
+    init() {
+        self.hasCompletedOnboarding = UserDefaults.standard.bool(forKey: "hasCompletedOnboarding")
+    }
+
+    func completeOnboarding() {
+        hasCompletedOnboarding = true
+    }
+
+    func resetOnboarding() {
+        hasCompletedOnboarding = false
+        currentPage = 1
+    }
+}

@@ -67,7 +67,7 @@ private extension HomeView {
     
     var header: some View {
         HStack {
-            Text("What do you want to make today?")
+            Text("What do you want to bake today?")
                 .font(.system(size: 32, weight: .bold))
             Spacer()
         }
