@@ -5,7 +5,7 @@
 //  Created by Rayan Waked on 8/8/24.
 //
 
-// MARK: - PREVIEW
+// MARK: - IMPORT
 import SwiftUI
 
 // MARK: - MAIN
