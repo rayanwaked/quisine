@@ -34,6 +34,7 @@ struct MealView: View {
             .padding(.top, 20)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.background)
         .onAppear {
             viewModel.fetchMeal()
         }
