@@ -20,11 +20,6 @@ struct Meal: Codable {
     let strYoutube: String?
     var ingredients: [String: String] = [:]
     
-    // MARK: - CODING KEYS
-    enum CodingKeys: String, CodingKey {
-        case idMeal, strMeal, strMealThumb, strInstructions, strCategory, strArea, strTags, strYoutube
-    }
-    
     // MARK: - INITIALIZE
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DynamicCodingKeys.self)

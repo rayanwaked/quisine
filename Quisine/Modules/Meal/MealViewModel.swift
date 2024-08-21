@@ -5,9 +5,11 @@
 //  Created by Rayan Waked on 8/9/24.
 //
 
+// MARK: - IMPORT
 import SwiftUI
 import Foundation
 
+// MARK: - VIEW MODEL
 class MealViewModel: ObservableObject {
     @Published var meal: Meal?
     @Published var ingredientCheckedStates: [Bool] = []

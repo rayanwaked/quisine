@@ -8,6 +8,7 @@
 // MARK: - IMPORT
 import SwiftUI
 
+// MARK: - VIEW MODEL
 class OnboardViewModel: ObservableObject {
     @Published var currentPage: Int = 1
     @Published var hasCompletedOnboarding: Bool {

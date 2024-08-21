@@ -98,6 +98,7 @@ private extension HomeView {
                 .padding(.bottom, -30)
                 .standardPadding()
             
+            // Navigation Link
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 0) {
                     ForEach(viewModel.meals.prefix(5), id: \.idMeal) { meal in
@@ -118,6 +119,28 @@ private extension HomeView {
         .padding(.top, 20)
         .background(Color.background)
     }
+    
+    // MARK: ROW COMP
+    func RowComp(for meal: MealList) -> some View {
+        NavigationLink(destination: MealView(mealID: meal.idMeal)) {
+            HStack {
+                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 60, height: 60)
+                .cornerRadius(8)
+                
+                Text(meal.strMeal.capitalized)
+                    .foregroundStyle(Color.primary)
+                    .padding(.leading)
+                
+                Spacer()
+            }
+        }
+    }
+
     
     // MARK: - REMAINING MEALS
     var list: some View {
